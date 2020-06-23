@@ -19,7 +19,7 @@ public class EmailController {
 
         @RequestMapping(value = "/")
         public String home() {
-//            System.out.print("Access /");
+            System.out.print("************ ping email ************ \n");
             return "Emails says hi!";
         }
     }
