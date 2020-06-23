@@ -9,12 +9,18 @@ import org.springframework.web.bind.annotation.RestController;
 public class EmailController {
 
     @RestController
-    @RequestMapping("/emails")
     public class ClientAController {
 
-        @RequestMapping("/{emailId}")
+        @RequestMapping("/emails/{emailId}")
         public String getBook(@PathVariable("emailId") String emailId) {
+            System.out.print("****** Access Email ******\n");
             return emailId + "@rest.local";
+        }
+
+        @RequestMapping(value = "/")
+        public String home() {
+//            System.out.print("Access /");
+            return "Emails says hi!";
         }
     }
 }
