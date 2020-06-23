@@ -14,7 +14,7 @@ public class EmailController {
 
         @RequestMapping("/{emailId}")
         public String getBook(@PathVariable("emailId") String emailId) {
-            return "This is email id: " + emailId;
+            return emailId + "@rest.local";
         }
     }
 }
